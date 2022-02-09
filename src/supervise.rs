@@ -257,7 +257,7 @@ impl<'a> Properties {
         }
 
         if let Some(domain) = self.domain.clone() {
-            if domain.trim().len() == 0 {
+            if domain.trim().is_empty() {
                 return Err(anyhow!("Domain name cannot be empty"));
             }
 
